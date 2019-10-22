@@ -21,7 +21,7 @@ struct sigaction setSignalHandler (int _sig, SignalHandlerType _sig_handler) {
 	// Install segv_handler as the handler for given signal.
 	struct sigaction sa;
 	struct sigaction prev_sa;
-
+	
     memset (&sa, 0, sizeof (sa));
     sa.sa_sigaction = _sig_handler;
     sa.sa_flags = SA_SIGINFO;
